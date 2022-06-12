@@ -1,0 +1,251 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --primary-color: rgb(7, 0, 29);
+  --primary-light: rgba(7, 0, 29, 0.16);
+  --secondary-color: rgb(5, 4, 0);
+  --text-color: rgb(228, 221, 221);
+  --cta-color: rgb(243, 72, 76);
+  --tertiary-color: rgb(119, 97, 188);
+  --tertiary-light: rgba(120, 97, 188, 0.495);
+  --inter: "Inter", sans-serif;
+  --monoton: "Monoton", cursive;
+
+  --font-xl: 14rem;
+  --font-mxl: 3.875rem;
+  --font-lg: 2.25rem;
+  --font-md: 1.5rem;
+  --font-sm: 1rem;
+
+  --bold: 700;
+  --extra-bold: 800;
+  --medium: 500;
+}
+
+.hz-align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vr-align-center {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mh-full {
+  min-height: 100vh;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: var(--inter);
+  color: var(--text-color);
+}
+
+.container {
+  padding: 0 120px;
+  width: 100%;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hero img {
+  width: 40%;
+}
+
+.works {
+  background-color: var(--text-color);
+  position: relative;
+}
+
+.remaining-w {
+  font-size: var(--font-xl);
+  color: var(--primary-light);
+  font-weight: var(--extra-bold);
+}
+
+.first-w {
+  font-family: var(--monoton);
+  color: var(--tertiary-light);
+  font-size: var(--font-xl);
+}
+
+.subtext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--primary-color);
+  font-size: var(--font-lg);
+  font-weight: var(--bold);
+}
+
+.skill-list {
+  font-size: var(--font-mxl);
+  color: var(--tertiary-light);
+}
+
+.stack-section {
+  background-color: var(--secondary-color);
+  font-size: var(--font-lg);
+}
+
+.text-align-c {
+  text-align: center;
+}
+
+.stack-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.items {
+  flex-basis: 16.6666%;
+  height: 140px;
+  background-image: url("./images/stack_images.png");
+  background-repeat: no-repeat;
+}
+
+.nodejs {
+  background-position: -206px 4px;
+}
+
+.rust {
+  background-position: -867px 4px;
+}
+
+.js {
+  background-position: 30px 4px;
+}
+
+.redux {
+  background-position: -638px 4px;
+}
+
+.mongodb {
+  background-position: -1043px 4px;
+}
+
+.react {
+  background-position: -412px 4px;
+}
+
+.interest-titles {
+  font-size: var(--font-lg);
+  color: var(--tertiary-light);
+}
+
+.interest-list {
+  list-style-image: url("./images/list-icon.svg");
+  font-size: var(--font-md);
+}
+
+.contact {
+  background-color: var(--text-color);
+}
+
+.contact input {
+  display: block;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.social {
+  display: flex;
+}
