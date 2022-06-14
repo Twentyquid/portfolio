@@ -181,6 +181,7 @@ body {
   flex-direction: column;
   align-items: center;
   /* min-height: 100vh; */
+  margin-top: -84px;
 }
 
 .image-box {
@@ -200,7 +201,7 @@ body {
 .works {
   background-color: var(--text-color);
   position: relative;
-  min-height: 30vh;
+  min-height: 100vh;
 }
 
 .remaining-w {
