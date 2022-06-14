@@ -128,6 +128,7 @@ select {
 }
 
 .mh-full {
+  min-height: 100vh;
 }
 
 .grid-2 {
@@ -187,12 +188,19 @@ body {
 }
 
 .hero img {
-  width: 70%;
+  width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+  .hero img {
+    width: 100%;
+  }
 }
 
 .works {
   background-color: var(--text-color);
   position: relative;
+  min-height: 30vh;
 }
 
 .remaining-w {
@@ -222,6 +230,10 @@ body {
   color: var(--tertiary-light);
 }
 
+.skill-list li {
+  margin-top: 2rem;
+}
+
 .stack-section {
   background-color: var(--secondary-color);
   font-size: var(--font-lg);
@@ -234,40 +246,50 @@ body {
 .stack-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 30px 0;
 }
 
+@media screen and (max-width: 600px) {
+  .stack-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
 .items {
-  flex-basis: 16.6666%;
-  height: 140px;
+  width: 64px;
+  height: 64px;
   background-image: url("./images/stack_images.png");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .nodejs {
-  background-position: -206px 4px;
+  background-position: 2px 0px;
 }
 
 .rust {
-  background-position: -867px 4px;
+  background-position: -459px 4px;
 }
 
 .js {
-  background-position: 30px 4px;
+  background-position: -115px 3px;
 }
 
 .redux {
-  background-position: -638px 4px;
+  background-position: -342px 4px;
 }
 
 .mongodb {
-  background-position: -1043px 4px;
+  background-position: -558px 9px;
 }
 
 .react {
-  background-position: -412px 4px;
+  background-position: -229px 4px;
 }
 
 .interest-titles {
@@ -278,6 +300,8 @@ body {
 .interest-list {
   list-style-image: url("./images/list-icon.svg");
   font-size: var(--font-md);
+  list-style-position: inside;
+  margin-top: 2rem;
 }
 
 .contact {
@@ -306,16 +330,24 @@ body {
 
 .social {
   color: var(--primary-color);
+  margin-left: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .social {
+    margin-left: 0;
+  }
 }
 
 .logos {
   display: flex;
   justify-content: space-between;
+  width: 144px;
 }
 
 .logos > div {
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   background-image: url("./images/socialmedia_icons.png");
   background-size: cover;
 }
@@ -325,9 +357,9 @@ body {
 }
 
 .instagram {
-  background-position: 199px 0;
+  background-position: 95px 0;
 }
 
 .twitter {
-  background-position: 64px 0;
+  background-position: 32px 0;
 }
