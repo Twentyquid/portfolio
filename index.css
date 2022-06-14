@@ -78,6 +78,7 @@ select {
   --primary-light: rgba(7, 0, 29, 0.16);
   --secondary-color: rgb(5, 4, 0);
   --text-color: rgb(228, 221, 221);
+  --text-color-dark: rgb(178, 171, 171);
   --cta-color: rgb(243, 72, 76);
   --tertiary-color: rgb(119, 97, 188);
   --tertiary-light: rgba(120, 97, 188, 0.495);
@@ -93,6 +94,18 @@ select {
   --bold: 700;
   --extra-bold: 800;
   --medium: 500;
+
+  --padding-lg: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --font-xl: calc(7rem / 2);
+    --font-mxl: cacl(3.875rem / 2);
+    --font-lg: calc(2.25rem / 2);
+    --font-md: calc(1.5rem / 2);
+    --font-sm: calc(1rem / 2);
+  }
 }
 
 .hz-align-center {
@@ -106,13 +119,27 @@ select {
   margin-bottom: auto;
 }
 
+.pd-v {
+  padding: var(--padding-lg) 0;
+}
+
+.mt-lg {
+  margin-top: 2rem;
+}
+
 .mh-full {
-  min-height: 100vh;
 }
 
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 600px) {
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 body {
@@ -126,6 +153,21 @@ body {
   width: 100%;
 }
 
+@media screen and (min-width: 600px) {
+  .mh-full {
+    min-height: 100vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+  /* .mh-full {
+    height: auto;
+  } */
+}
+
 .nav-list {
   list-style-type: none;
   display: flex;
@@ -136,13 +178,16 @@ body {
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+}
+
+.image-box {
+  width: 100%;
 }
 
 .hero img {
-  width: 40%;
+  width: 70%;
 }
 
 .works {
@@ -237,6 +282,7 @@ body {
 
 .contact {
   background-color: var(--text-color);
+  color: var(--primary-color);
 }
 
 .contact input {
@@ -244,8 +290,44 @@ body {
   border: none;
   outline: none;
   border-bottom: 2px solid var(--secondary-color);
+  margin-top: 2rem;
+  background-color: var(--text-color-dark);
+}
+
+.contact button {
+  margin-top: 2rem;
+  background-color: var(--cta-color);
+  border: none;
+  border-radius: 26px;
+  padding: 0.5rem 1.2rem;
+  color: var(--primary-color);
+  font-weight: var(--bold);
 }
 
 .social {
+  color: var(--primary-color);
+}
+
+.logos {
   display: flex;
+  justify-content: space-between;
+}
+
+.logos > div {
+  width: 64px;
+  height: 64px;
+  background-image: url("./images/socialmedia_icons.png");
+  background-size: cover;
+}
+
+.github {
+  background-position: 0 0;
+}
+
+.instagram {
+  background-position: 199px 0;
+}
+
+.twitter {
+  background-position: 64px 0;
 }
