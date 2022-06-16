@@ -392,3 +392,13 @@ body {
 .twitter {
   background-position: 32px 0;
 }
+
+.legal {
+  font-size: 14px;
+  color: rgb(116, 116, 116);
+}
+
+.legal-items {
+  display: flex;
+  justify-content: space-between;
+}
