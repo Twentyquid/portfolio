@@ -231,6 +231,22 @@ body {
   z-index: 200;
 }
 
+.bar {
+  width: 100%;
+  width: 30px;
+  height: 2px;
+  background-color: var(--cta-color);
+  margin-top: 5px;
+}
+
+.bar2 {
+  width: 25px;
+}
+
+.bar3 {
+  width: 20px;
+}
+
 #check-box {
   display: none;
 }
