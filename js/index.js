@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   anime({
     targets: heroimage,
     easing: "easeOutExpo",
+    translateY: [-50, 0],
     opacity: [0, 1],
     delay: 1100,
   });
