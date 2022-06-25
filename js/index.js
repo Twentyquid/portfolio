@@ -46,3 +46,36 @@ document.addEventListener("DOMContentLoaded", () => {
     delay: 1150,
   });
 });
+
+let observer = new IntersectionObserver(interHandler, {
+  root: null,
+  rootMargin: "5px",
+  threshold: 1,
+});
+
+let observer2 = new IntersectionObserver(interHandler, {
+  root: null,
+  rootMargin: "5px",
+  threshold: 1,
+});
+
+let element = document.querySelector(".works");
+let element2 = document.querySelectorAll(".works")[1];
+
+observer.observe(element);
+observer.observe(element2);
+
+function interHandler(entries, observer) {
+  entries.forEach((element) => {
+    if (element.isIntersecting) {
+      console.log("is intersecting");
+      anime({
+        targets: ".subtext",
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1500,
+        translateX: [-100, 0],
+      });
+    }
+  });
+}
